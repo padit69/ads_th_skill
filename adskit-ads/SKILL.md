@@ -1,9 +1,14 @@
 ---
 name: adskit-ads
-description: Integrate AdMob ads into an iOS (SwiftUI) app through the in-house AdsKit Swift package — Google UMP consent (GDPR / US states), App Tracking Transparency, and App Open ads — and extend AdsKit with new formats (banner, interstitial, rewarded, native). Use this whenever the user wants to add ads, AdMob, quảng cáo, App Open, consent/UMP/GDPR form, ATT popup, "Privacy Choices", or SKAdNetwork setup to an iOS app, wants to debug why ads/consent/ATT don't show, prepare an ads release checklist, or add a new ad type to AdsKit — even if they don't mention AdsKit by name (e.g. "tích hợp ads cho app", "thêm quảng cáo vào app iOS", "add interstitial to AdsKit").
+description: Integrate AdMob ads into an iOS (SwiftUI) app through the in-house AdsKit Swift package — Google UMP consent (GDPR / US states), App Tracking Transparency, and App Open ads — and extend AdsKit with new formats (banner, interstitial, rewarded, native) via pull request. Run only when the user invokes /adskit-ads.
+disable-model-invocation: true
 ---
 
 # AdsKit ads integration
+
+This skill runs only because the user invoked it; it changes their project (copies a package,
+edits the `.xcodeproj`, adds code). Work on the project the user pointed at — if it's unclear which
+app or target, ask before touching anything.
 
 AdsKit is a small Swift package (iOS 15+, Swift 5.9) that wraps Google Mobile Ads + UMP so apps get
 consent, ATT and ads in the order Google and Apple require. A copy of the package lives in

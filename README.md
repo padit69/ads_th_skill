@@ -26,8 +26,10 @@ Dùng symlink thì sửa skill ở đây là có hiệu lực ngay. Muốn bản
 **Chỉ cho một project:** copy vào `<project>/.claude/skills/adskit-ads` (có thể commit vào git
 để cả team dùng).
 
-Mở phiên Claude Code mới để skill được nạp. Kiểm tra: gõ `/adskit-ads`, hoặc hỏi
-"tích hợp ads cho app này".
+Mở phiên Claude Code mới để skill được nạp.
+
+**Skill chỉ chạy khi bạn gọi** bằng `/adskit-ads` (frontmatter có `disable-model-invocation: true`).
+Claude không tự dùng skill hay tự sửa project chỉ vì bạn nhắc tới quảng cáo.
 
 ### Yêu cầu
 
@@ -36,11 +38,11 @@ Mở phiên Claude Code mới để skill được nạp. Kiểm tra: gõ `/adsk
 
 ## Cách dùng
 
-Mở Claude Code trong thư mục app, rồi nói chẳng hạn:
+Mở Claude Code trong thư mục app, gõ `/adskit-ads` kèm yêu cầu, chẳng hạn:
 
-- "Tích hợp ads cho app này, unit App Open là `ca-app-pub-xxx/yyy`"
-- "Thêm interstitial vào AdsKit, hiện sau mỗi 3 lần export"
-- "Sao form GDPR không hiện?"
+- `/adskit-ads tích hợp ads cho app này, unit App Open là ca-app-pub-xxx/yyy`
+- `/adskit-ads thêm interstitial vào AdsKit, hiện sau mỗi 3 lần export`
+- `/adskit-ads sao form GDPR không hiện?`
 
 Có thể chạy riêng bước copy + nối package:
 
