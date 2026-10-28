@@ -14,8 +14,10 @@ Khi được gọi, Claude sẽ:
 **Cho mọi project trên máy** (khuyên dùng):
 
 ```sh
+git clone https://github.com/padit69/ads_th_skill.git
+cd ads_th_skill
 mkdir -p ~/.claude/skills
-ln -s "$(pwd)/adskit-ads" ~/.claude/skills/adskit-ads    # chạy trong thư mục ads_th_skill
+ln -s "$(pwd)/adskit-ads" ~/.claude/skills/adskit-ads
 ```
 
 Dùng symlink thì sửa skill ở đây là có hiệu lực ngay. Muốn bản độc lập thì dùng
